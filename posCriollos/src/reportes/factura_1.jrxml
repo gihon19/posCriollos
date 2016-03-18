@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
-<!-- 2016-03-17T22:41:30 -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Factura_Pos" pageWidth="208" pageHeight="720" columnWidth="198" leftMargin="5" rightMargin="5" topMargin="7" bottomMargin="7" isIgnorePagination="true" uuid="df013db5-f76e-44d3-b0df-bcbc46d93160">
+<!-- 2016-03-17T23:01:04 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Factura_Pos" pageWidth="208" pageHeight="720" columnWidth="190" leftMargin="13" rightMargin="5" topMargin="7" bottomMargin="7" isIgnorePagination="true" uuid="df013db5-f76e-44d3-b0df-bcbc46d93160">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageHeight" value="inch"/>
@@ -138,18 +138,18 @@ WHERE
 	<title>
 		<band height="138" splitType="Stretch">
 			<subreport runToBottom="true">
-				<reportElement x="-5" y="106" width="208" height="26" isPrintInFirstWholeBand="true" uuid="91aa1a08-d3a6-4d1a-8c13-5732fa0ab366"/>
+				<reportElement x="-13" y="106" width="208" height="26" isPrintInFirstWholeBand="true" uuid="91aa1a08-d3a6-4d1a-8c13-5732fa0ab366"/>
 				<subreportParameter name="cod_rango">
 					<subreportParameterExpression><![CDATA[$F{cod_rango}]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<returnValue subreportVariable="dato1" toVariable="dato1"/>
-				<subreportExpression><![CDATA["src/reportes/factura_datos_dei.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["factura_datos_dei.jasper"]]></subreportExpression>
 			</subreport>
 			<subreport>
-				<reportElement x="-5" y="0" width="208" height="68" uuid="58121520-40b2-4c53-a7f3-d026f760d82a"/>
+				<reportElement x="-13" y="0" width="208" height="68" uuid="58121520-40b2-4c53-a7f3-d026f760d82a"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["src/reportes/factura_datos_empresa.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["factura_datos_empresa.jasper"]]></subreportExpression>
 			</subreport>
 			<staticText>
 				<reportElement x="1" y="76" width="178" height="22" uuid="22ca07ff-635e-4011-b2e3-4fbf013ed974"/>
