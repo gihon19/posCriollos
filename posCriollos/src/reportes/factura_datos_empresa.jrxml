@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
-<!-- 2016-03-17T11:14:48 -->
+<!-- 2016-03-17T21:48:04 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="datos_empresa" pageWidth="208" pageHeight="720" columnWidth="180" leftMargin="18" rightMargin="10" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="df013db5-f76e-44d3-b0df-bcbc46d93160">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
@@ -45,28 +45,34 @@ FROM datos_empresa]]>
 				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="35" width="178" height="10" uuid="b7345547-3a50-4bf8-b707-5b63e6cdd867"/>
+				<reportElement x="1" y="35" width="178" height="11" uuid="b7345547-3a50-4bf8-b707-5b63e6cdd867">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA["R.N.T "+$F{rtn}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="45" width="178" height="10" uuid="732f1081-9c43-4770-a456-3ec4bf3a6fc4"/>
+				<reportElement x="1" y="45" width="178" height="11" uuid="732f1081-9c43-4770-a456-3ec4bf3a6fc4">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Telefono "+$F{telefono}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="55" width="178" height="10" uuid="d531031f-4c83-46e5-9e83-780771b11649"/>
+				<reportElement x="1" y="55" width="178" height="11" uuid="d531031f-4c83-46e5-9e83-780771b11649">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{correo}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="25" width="178" height="10" uuid="03504908-688d-49b2-ab14-74084847b856"/>
+				<reportElement x="1" y="25" width="178" height="11" uuid="03504908-688d-49b2-ab14-74084847b856"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
