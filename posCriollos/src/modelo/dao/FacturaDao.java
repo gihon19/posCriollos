@@ -195,8 +195,9 @@ public class FacturaDao {
 				+ "subtotal_excento,"
 				+ "subtotal15,"
 				+ "subtotal18,"
-				+ "isvOtros)"
-				+ " VALUES (now(),?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+				+ "isvOtros,"
+				+ "cod_rango)"
+				+ " VALUES (now(),?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		
 		try 
 		{
@@ -233,6 +234,9 @@ public class FacturaDao {
 			agregarFactura.setBigDecimal(18, myFactura.getSubTotal18());
 			agregarFactura.setBigDecimal(19, myFactura.getTotalOtrosImpuesto1());
 			
+			//para relacionar el codigo de cai con cada factura
+			EmpresaDao empresa=new EmpresaDao(conexion);
+			agregarFactura.setInt(20, empresa.getIdCaiAct());
 			
 			
 			
@@ -422,6 +426,11 @@ public class FacturaDao {
 				existe=true;
 				unaFactura.setIdFactura(res.getInt("numero_factura"));
 				Cliente unCliente=myClienteDao.buscarCliente(res.getInt("codigo_cliente"));
+				
+				if(unCliente==null){
+					unCliente=new Cliente();
+					unCliente.setNombre("Cliente no identicado");
+				}
 				
 				unaFactura.setCliente(unCliente);
 				

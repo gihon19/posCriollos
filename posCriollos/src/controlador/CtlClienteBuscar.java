@@ -139,7 +139,7 @@ public Cliente buscarCliente(Window v){
 		
 		//Recoger qu� fila se ha pulsadao en la tabla
         filaPulsada = this.view.getTablaClientes().getSelectedRow();
-		if (e.getClickCount() == 2){
+		if (e.getClickCount() == 1){
 			myCliente=this.view.getModelo().getCliente(filaPulsada);
 			//clienteDao.desconectarBD();
 			resultado=true;

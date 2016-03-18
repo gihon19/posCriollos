@@ -56,7 +56,7 @@ public class ViewCambioPagoTouch extends JDialog {
 		 this.getContentPane().setBackground(color1);
 		//this.setSize(317, 304);
 		//this.setPreferredSize(new Dimension(588, 316));
-		this.setSize(696, 646);
+		this.setSize(696, 596);
 		this.setResizable(false);
 		//setUndecorated(true);
 		getContentPane().setLayout(null);
@@ -132,7 +132,7 @@ public class ViewCambioPagoTouch extends JDialog {
 		btnCobrar.setForeground(Color.BLACK);
 		btnCobrar.setBackground(color1);
 		btnCobrar.setText("F2 Cobrar");
-		btnCobrar.setBounds(432, 491, 144, 82);
+		btnCobrar.setBounds(482, 491, 186, 82);
 		getContentPane().add(btnCobrar);
 		
 		btnCerrar = new BotonCancelar();
@@ -140,12 +140,12 @@ public class ViewCambioPagoTouch extends JDialog {
 		btnCerrar.setForeground(Color.BLACK);
 		btnCerrar.setBackground(color1);
 		btnCerrar.setText("Esc Cerrar");
-		btnCerrar.setBounds(249, 491, 156, 82);
+		btnCerrar.setBounds(231, 491, 186, 82);
 		getContentPane().add(btnCerrar);
 		
 		panel_2 = new JPanel();
 		panel_2.setBackground(new Color(60, 179, 113));
-		panel_2.setBounds(0, 0, 219, 507);
+		panel_2.setBounds(0, 0, 219, 573);
 		getContentPane().add(panel_2);
 		panel_2.setLayout(null);
 		

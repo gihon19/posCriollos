@@ -995,16 +995,19 @@ public void calcularTotal(DetalleFactura detalle){
 			
 			
 			
-			ViewCargarVenderor viewVendedor=new ViewCargarVenderor(view);
-			CtlCargarVendedor ctlVendedor=new CtlCargarVendedor(viewVendedor,conexion);
+			//ViewCargarVenderor viewVendedor=new ViewCargarVenderor(view);
+			//CtlCargarVendedor ctlVendedor=new CtlCargarVendedor(viewVendedor,conexion);
 			
-			boolean resulVendedor=ctlVendedor.cargarVendedor();
+			boolean resulVendedor=true;//ctlVendedor.cargarVendedor();
 			
 			if(resulVendedor)//verifica si ingreso el codigo del bombero
 			{
 			
 				//se agrega el vendedor a la factura
-				myFactura.setVendedor(ctlVendedor.getVendetor());
+				Empleado unoEmpleado=new Empleado();
+				unoEmpleado.setCodigo(1);
+				
+				myFactura.setVendedor(unoEmpleado);
 				
 				if(view.getRdbtnContado().isSelected()){
 			

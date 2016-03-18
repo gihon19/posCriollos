@@ -24,6 +24,7 @@ import modelo.CierreCaja;
 import modelo.Cliente;
 import modelo.Conexion;
 import modelo.DetalleFactura;
+import modelo.Empleado;
 import modelo.Factura;
 import modelo.dao.ArticuloDao;
 import modelo.dao.CierreCajaDao;
@@ -43,6 +44,8 @@ import view.ViewListaClientes;
 import view.ViewListaFactura;
 import view.ViewSalidaCaja;
 import view.botones.BotonArticulo;
+import view.botones.BotonBebida;
+import view.botones.BotonComida;
 
 public class CtlFacturarTouch implements ActionListener, MouseListener, TableModelListener, WindowListener, KeyListener {
 
@@ -67,8 +70,8 @@ public class CtlFacturarTouch implements ActionListener, MouseListener, TableMod
 	private static final Pattern numberPattern=Pattern.compile("-?\\d+");
 	
 	private CierreCaja myCierre;
-	private List<BotonArticulo> botonesComida=new ArrayList<BotonArticulo>();
-	private List<BotonArticulo> botonesBebida=new ArrayList<BotonArticulo>();
+	private List<BotonComida> botonesComida=new ArrayList<BotonComida>();
+	private List<BotonBebida> botonesBebida=new ArrayList<BotonBebida>();
 	private List<Articulo> articulosComida;
 	private List<Articulo> articulosBebida;
 	private Integer pagBotonComida=1;
@@ -146,7 +149,7 @@ public class CtlFacturarTouch implements ActionListener, MouseListener, TableMod
 		if(articulosBebida!=null){
 			for(int c=0;c<articulosBebida.size();c++){
 				//this.view.getModelo().agregarArticulo(articulos.get(c));
-					BotonArticulo uno=new BotonArticulo(articulosBebida.get(c).getArticulo());
+				BotonBebida uno=new BotonBebida(articulosBebida.get(c).getArticulo());
 					
 					//si es articulo es nulo en caso -1 se crea un comando nulo para identificarlo
 					if(articulosBebida.get(c).getId()!=-1)
@@ -180,7 +183,7 @@ public class CtlFacturarTouch implements ActionListener, MouseListener, TableMod
 			if(articulosComida!=null){
 				for(int c=0;c<articulosComida.size();c++){
 					//this.view.getModelo().agregarArticulo(articulos.get(c));
-						BotonArticulo uno=new BotonArticulo(articulosComida.get(c).getArticulo());
+						BotonComida uno=new BotonComida(articulosComida.get(c).getArticulo());
 						
 						//si es articulo es nulo en caso -1 se crea un comando nulo para identificarlo
 						if(articulosComida.get(c).getId()!=-1)
@@ -782,15 +785,18 @@ public void calcularTotal(DetalleFactura detalle){
 			break;
 			
 		case KeyEvent.VK_F8:
+			ViewCobro viewCobro=new ViewCobro(view);
+			CtlCobro ctlCobro=new CtlCobro(viewCobro,conexion);
 			
 			break;
 		case KeyEvent.VK_F9:
+			ViewSalidaCaja viewSalida=new ViewSalidaCaja(view);
+			CtlSalidaCaja ctlSalida=new CtlSalidaCaja(viewSalida,conexion);
 			
 			break;
 			
 		case KeyEvent.VK_F10:
-			ViewCobro viewCobro=new ViewCobro(view);
-			CtlCobro ctlCobro=new CtlCobro(viewCobro,conexion);
+			
 			
 			break;
 			
@@ -799,8 +805,7 @@ public void calcularTotal(DetalleFactura detalle){
 			break;
 			
 		case KeyEvent.VK_F12:
-			ViewSalidaCaja viewSalida=new ViewSalidaCaja(view);
-			CtlSalidaCaja ctlSalida=new CtlSalidaCaja(viewSalida,conexion);
+			
 			break;
 			
 		case  KeyEvent.VK_ESCAPE:
@@ -1034,16 +1039,20 @@ public void calcularTotal(DetalleFactura detalle){
 			
 			
 			
-			ViewCargarVenderor viewVendedor=new ViewCargarVenderor(view);
-			CtlCargarVendedor ctlVendedor=new CtlCargarVendedor(viewVendedor,conexion);
+			//ViewCargarVenderor viewVendedor=new ViewCargarVenderor(view);
+			//CtlCargarVendedor ctlVendedor=new CtlCargarVendedor(viewVendedor,conexion);
 			
-			boolean resulVendedor=ctlVendedor.cargarVendedor();
+			boolean resulVendedor=true;//ctlVendedor.cargarVendedor();
+			
 			
 			if(resulVendedor)//verifica si ingreso el codigo del bombero
 			{
 			
 				//se agrega el vendedor a la factura
-				myFactura.setVendedor(ctlVendedor.getVendetor());
+				Empleado unoEmpleado=new Empleado();
+				unoEmpleado.setCodigo(1);
+				
+				myFactura.setVendedor(unoEmpleado);
 				
 				if(view.getRdbtnContado().isSelected()){
 			
@@ -1087,13 +1096,13 @@ public void calcularTotal(DetalleFactura detalle){
 									this.view.dispose();*/
 									//AbstractJasperReports.createReportFactura( conexion.getPoolConexion().getConnection(), "Factura_Saint_Paul.jasper",myFactura.getIdFactura() );
 									AbstractJasperReports.createReport(conexion.getPoolConexion().getConnection(), 1, myFactura.getIdFactura());
-									AbstractJasperReports.showViewer(view);
+									//AbstractJasperReports.showViewer(view);
 									//AbstractJasperReports.exportToTXT();
 									
 									
 									
 									
-									//AbstractJasperReports.imprimierFactura();
+									AbstractJasperReports.imprimierFactura();
 									//AbsqtractJasperReports.imprimierFactura();
 									
 									

@@ -19,8 +19,11 @@ import javax.swing.SwingConstants;
 
 import view.botones.BotonCancelar;
 import view.botones.BotonCobrar;
+import view.botones.BotonesApp;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JButton;
 
 public class ViewCambio extends JDialog  {
 	
@@ -42,7 +45,7 @@ public class ViewCambio extends JDialog  {
 		 
 		 
 		
-		this.setPreferredSize(new Dimension(420, 250));
+		this.setPreferredSize(new Dimension(420, 307));
 		//this.setResizable(false);
 		//setUndecorated(true);
 		getContentPane().setLayout(null);
@@ -91,7 +94,16 @@ public class ViewCambio extends JDialog  {
 		panel.add(txtCambio);
 		txtCambio.setColumns(10);
 		
-		this.setSize(420, 246);
+		JButton btnAceptar = new BotonesApp("Aceptar");
+		btnAceptar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+			}
+		});
+		btnAceptar.setBounds(45, 200, 333, 57);
+		getContentPane().add(btnAceptar);
+		
+		this.setSize(420, 307);
 		
 		//this.setResizable(false);
 		//centrar la ventana en la pantalla
@@ -105,5 +117,4 @@ public class ViewCambio extends JDialog  {
 	public JTextField getTxtEfectivo(){
 		return txtEfectivo;
 	}
-
 }

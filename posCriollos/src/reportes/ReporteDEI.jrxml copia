@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
-<!-- 2016-03-17T14:44:26 -->
+<!-- 2016-02-23T16:07:14 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteDei" pageWidth="612" pageHeight="792" whenNoDataType="AllSectionsNoDetail" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="df013db5-f76e-44d3-b0df-bcbc46d93160">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
@@ -107,30 +107,87 @@ ORDER BY  fecha ASC]]>
 		<variableExpression><![CDATA[$F{isv4}]]></variableExpression>
 	</variable>
 	<title>
-		<band height="98" splitType="Stretch">
+		<band height="117" splitType="Stretch">
 			<staticText>
-				<reportElement style="Title" x="2" y="50" width="570" height="22" uuid="bc1ce1da-8232-46ea-be55-cec4abb986dd"/>
+				<reportElement style="Title" x="2" y="45" width="570" height="22" uuid="bc1ce1da-8232-46ea-be55-cec4abb986dd"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="16"/>
 				</textElement>
 				<text><![CDATA[Reporte de Ventas D.E.I]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="0" y="19" width="571" height="12" uuid="62ab06e3-8503-4626-af69-a4bfa871b17c"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[WEST END CALLE PRINCIPAL, ROATAN, ISLA DE LA BAHIA.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="3" width="570" height="23" uuid="3c2bd69a-9200-41f6-af53-6a56715225f5"/>
+				<textElement textAlignment="Center">
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[SONRISA HOTEL GROUP S.A.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="32" width="572" height="14" uuid="a1709503-4ace-42cf-9af1-2a4b0fbe7a50"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[TELEFONO (504) 2445-1529   RTN 08019003423927]]></text>
+			</staticText>
 			<textField>
-				<reportElement x="2" y="72" width="569" height="13" uuid="9728e7a6-4f41-4354-a5e8-0e638e21fa3d"/>
+				<reportElement x="2" y="67" width="569" height="13" uuid="9728e7a6-4f41-4354-a5e8-0e638e21fa3d"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$P{Mes}+"/"+$P{Anio}]]></textFieldExpression>
 			</textField>
-			<subreport>
-				<reportElement x="-20" y="0" width="612" height="45" uuid="2ac082ae-5a41-486a-9e3e-7e0d094998f2"/>
-				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["src/reportes/encabezado_carta.jasper"]]></subreportExpression>
-			</subreport>
+			<staticText>
+				<reportElement style="Column header" x="180" y="101" width="136" height="16" forecolor="#030303" uuid="04df9e5b-6d64-42fe-8bd4-b9df61d7c907"/>
+				<box>
+					<topPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
+					<leftPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
+					<bottomPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
+					<rightPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Ventas 15%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="316" y="101" width="128" height="16" forecolor="#030303" uuid="694d1d62-5ec9-47d6-8e2a-f80af7f20f80">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
+					<leftPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
+					<bottomPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
+					<rightPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Ventas 18%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="138" y="101" width="42" height="16" forecolor="#030303" uuid="afe0149d-0f40-424f-9e68-0add7dfecd66"/>
+				<box>
+					<topPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
+					<leftPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#666666"/>
+					<rightPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Ventas]]></text>
+			</staticText>
 		</band>
 	</title>
 	<columnHeader>
-		<band height="33" splitType="Stretch">
+		<band height="16" splitType="Stretch">
 			<staticText>
-				<reportElement style="Column header" x="62" y="17" width="38" height="16" forecolor="#030303" uuid="6754685d-6437-47f3-b59f-16c8525a9d66"/>
+				<reportElement style="Column header" x="62" y="0" width="38" height="16" forecolor="#030303" uuid="6754685d-6437-47f3-b59f-16c8525a9d66"/>
 				<box>
 					<topPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
 					<leftPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
@@ -143,7 +200,7 @@ ORDER BY  fecha ASC]]>
 				<text><![CDATA[Inicio]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="100" y="17" width="38" height="16" forecolor="#030303" uuid="a193b6af-c46b-4f01-9db3-91d7a0159a24"/>
+				<reportElement style="Column header" x="100" y="0" width="38" height="16" forecolor="#030303" uuid="a193b6af-c46b-4f01-9db3-91d7a0159a24"/>
 				<box>
 					<topPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
 					<leftPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
@@ -156,7 +213,7 @@ ORDER BY  fecha ASC]]>
 				<text><![CDATA[Final]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="138" y="17" width="42" height="16" forecolor="#030303" uuid="c8ec5707-c458-4c27-82e2-c61e23e1f4e2"/>
+				<reportElement style="Column header" x="138" y="0" width="42" height="16" forecolor="#030303" uuid="c8ec5707-c458-4c27-82e2-c61e23e1f4e2"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.2" lineStyle="Solid" lineColor="#000000"/>
@@ -169,7 +226,7 @@ ORDER BY  fecha ASC]]>
 				<text><![CDATA[Excentas]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="495" y="17" width="76" height="16" forecolor="#030303" uuid="3e2a378b-fd1a-4d1f-b6e4-4b80ab2a9568"/>
+				<reportElement style="Column header" x="495" y="0" width="76" height="16" forecolor="#030303" uuid="3e2a378b-fd1a-4d1f-b6e4-4b80ab2a9568"/>
 				<box>
 					<topPen lineWidth="0.2" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.2" lineStyle="Solid" lineColor="#000000"/>
@@ -182,7 +239,7 @@ ORDER BY  fecha ASC]]>
 				<text><![CDATA[Total]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="180" y="17" width="61" height="16" forecolor="#030303" uuid="2512a5d4-918b-48b9-8cbb-42992150f5aa">
+				<reportElement style="Column header" x="180" y="0" width="61" height="16" forecolor="#030303" uuid="2512a5d4-918b-48b9-8cbb-42992150f5aa">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
 				<box>
@@ -197,7 +254,7 @@ ORDER BY  fecha ASC]]>
 				<text><![CDATA[ ISV15]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="316" y="17" width="61" height="16" forecolor="#030303" uuid="4cd4858a-89b9-476d-a4ff-b6ea1838d1a1"/>
+				<reportElement style="Column header" x="316" y="0" width="61" height="16" forecolor="#030303" uuid="4cd4858a-89b9-476d-a4ff-b6ea1838d1a1"/>
 				<box>
 					<topPen lineWidth="0.2" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.2" lineStyle="Solid" lineColor="#000000"/>
@@ -210,7 +267,7 @@ ORDER BY  fecha ASC]]>
 				<text><![CDATA[ISV18]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="2" y="17" width="60" height="16" forecolor="#030303" uuid="465a1eba-f9eb-45b9-a0c0-ffde29719935"/>
+				<reportElement style="Column header" x="2" y="0" width="60" height="16" forecolor="#030303" uuid="465a1eba-f9eb-45b9-a0c0-ffde29719935"/>
 				<box>
 					<topPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
 					<leftPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
@@ -223,7 +280,7 @@ ORDER BY  fecha ASC]]>
 				<text><![CDATA[Fecha]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="241" y="17" width="75" height="16" forecolor="#030303" uuid="1954a142-3ada-420d-a78e-6af517f3702b">
+				<reportElement style="Column header" x="241" y="0" width="75" height="16" forecolor="#030303" uuid="1954a142-3ada-420d-a78e-6af517f3702b">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
 				<box>
@@ -238,7 +295,7 @@ ORDER BY  fecha ASC]]>
 				<text><![CDATA[Total]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="377" y="17" width="67" height="16" forecolor="#030303" uuid="67ee4260-aeaf-488e-bc0b-7d46f97d3ff9">
+				<reportElement style="Column header" x="377" y="0" width="67" height="16" forecolor="#030303" uuid="67ee4260-aeaf-488e-bc0b-7d46f97d3ff9">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
 				<box>
@@ -253,22 +310,7 @@ ORDER BY  fecha ASC]]>
 				<text><![CDATA[Total]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="444" y="17" width="51" height="16" uuid="08bfdd17-e521-4554-b249-634560364547"/>
-				<box>
-					<topPen lineWidth="0.2" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.2" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.2" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.2" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Arial" isBold="true"/>
-				</textElement>
-				<text><![CDATA[ISV4]]></text>
-			</staticText>
-			<staticText>
-				<reportElement style="Column header" x="62" y="1" width="76" height="16" forecolor="#030303" uuid="2cbfe857-49c1-414c-9a8f-bccfdf230720">
-					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
-				</reportElement>
+				<reportElement style="Column header" x="62" y="-16" width="76" height="16" forecolor="#030303" uuid="2cbfe857-49c1-414c-9a8f-bccfdf230720"/>
 				<box>
 					<topPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
 					<leftPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
@@ -281,45 +323,17 @@ ORDER BY  fecha ASC]]>
 				<text><![CDATA[No Factura]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="138" y="1" width="42" height="16" forecolor="#030303" uuid="e6f0c307-b2a5-4573-b1b9-637e7532fa5b"/>
+				<reportElement x="444" y="0" width="51" height="16" uuid="08bfdd17-e521-4554-b249-634560364547"/>
 				<box>
-					<topPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
-					<leftPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#666666"/>
-					<rightPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
+					<topPen lineWidth="0.2" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.2" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.2" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.2" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10"/>
+					<font fontName="Arial" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Ventas]]></text>
-			</staticText>
-			<staticText>
-				<reportElement style="Column header" x="180" y="1" width="136" height="16" forecolor="#030303" uuid="04df9e5b-6d64-42fe-8bd4-b9df61d7c907"/>
-				<box>
-					<topPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
-					<leftPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
-					<bottomPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
-					<rightPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10"/>
-				</textElement>
-				<text><![CDATA[Ventas 15%]]></text>
-			</staticText>
-			<staticText>
-				<reportElement style="Column header" x="316" y="1" width="128" height="16" forecolor="#030303" uuid="694d1d62-5ec9-47d6-8e2a-f80af7f20f80">
-					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
-				</reportElement>
-				<box>
-					<topPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
-					<leftPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
-					<bottomPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
-					<rightPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10"/>
-				</textElement>
-				<text><![CDATA[Ventas 18%]]></text>
+				<text><![CDATA[ISV4]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
