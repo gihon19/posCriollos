@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
-<!-- 2016-03-17T22:59:01 -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="datos_empresa" pageWidth="208" pageHeight="720" columnWidth="190" leftMargin="13" rightMargin="5" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="df013db5-f76e-44d3-b0df-bcbc46d93160">
+<!-- 2016-03-17T23:09:39 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="datos_empresa" pageWidth="208" pageHeight="720" columnWidth="188" leftMargin="15" rightMargin="5" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="df013db5-f76e-44d3-b0df-bcbc46d93160">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageHeight" value="inch"/>
@@ -27,56 +27,52 @@ FROM datos_empresa]]>
 	<field name="direccion" class="java.lang.String"/>
 	<variable name="dato1" class="java.lang.String"/>
 	<title>
-		<band height="77" splitType="Stretch">
+		<band height="79" splitType="Stretch">
 			<textField>
-				<reportElement x="1" y="0" width="178" height="12" uuid="26025472-71fe-408c-bbe8-b106cd474dd4"/>
+				<reportElement x="1" y="0" width="169" height="12" uuid="26025472-71fe-408c-bbe8-b106cd474dd4"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
-					<font fontName="Monospaced" size="9"/>
+					<font fontName="Monospaced" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="13" width="178" height="20" uuid="0a3d1fde-1d67-49ff-b05b-de85fcfae3e0">
+				<reportElement x="1" y="13" width="169" height="17" uuid="0a3d1fde-1d67-49ff-b05b-de85fcfae3e0">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Monospaced" size="9"/>
+					<font fontName="Monospaced" size="7"/>
 					<paragraph lineSpacing="Proportional" lineSpacingSize="0.7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="38" width="178" height="12" uuid="b7345547-3a50-4bf8-b707-5b63e6cdd867">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-				</reportElement>
+				<reportElement x="1" y="36" width="169" height="10" uuid="b7345547-3a50-4bf8-b707-5b63e6cdd867"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Monospaced" size="9"/>
+					<font fontName="Monospaced" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA["R.N.T "+$F{rtn}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="48" width="178" height="12" uuid="732f1081-9c43-4770-a456-3ec4bf3a6fc4">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-				</reportElement>
+				<reportElement x="1" y="46" width="169" height="10" uuid="732f1081-9c43-4770-a456-3ec4bf3a6fc4"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Monospaced" size="9"/>
+					<font fontName="Monospaced" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Telefono "+$F{telefono}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="58" width="178" height="12" uuid="d531031f-4c83-46e5-9e83-780771b11649">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-				</reportElement>
+				<reportElement x="1" y="56" width="169" height="10" uuid="d531031f-4c83-46e5-9e83-780771b11649"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Monospaced" size="8"/>
+					<font fontName="Monospaced" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{correo}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="29" width="178" height="12" uuid="03504908-688d-49b2-ab14-74084847b856"/>
+				<reportElement x="1" y="27" width="169" height="10" uuid="03504908-688d-49b2-ab14-74084847b856">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Monospaced" size="8"/>
+					<font fontName="Monospaced" size="7"/>
 					<paragraph lineSpacing="Fixed"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Propietaria "+$F{propietario}]]></textFieldExpression>

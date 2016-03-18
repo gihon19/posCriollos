@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
-<!-- 2016-03-17T23:00:35 -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="datos_dei" pageWidth="208" pageHeight="720" whenNoDataType="NoDataSection" columnWidth="190" leftMargin="13" rightMargin="5" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="df013db5-f76e-44d3-b0df-bcbc46d93160">
+<!-- 2016-03-17T23:13:02 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="datos_dei" pageWidth="208" pageHeight="720" whenNoDataType="NoDataSection" columnWidth="188" leftMargin="15" rightMargin="5" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="df013db5-f76e-44d3-b0df-bcbc46d93160">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageHeight" value="inch"/>
@@ -35,30 +35,36 @@ FROM datos_factura where codigo_rango= $P{cod_rango}]]>
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="82">
+		<band height="69">
 			<staticText>
-				<reportElement x="1" y="1" width="159" height="12" uuid="0de9c8fc-4af1-4677-97ca-e1f082a6a3f4"/>
+				<reportElement x="1" y="1" width="159" height="10" uuid="0de9c8fc-4af1-4677-97ca-e1f082a6a3f4">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
 				<textElement>
-					<font fontName="Monospaced" size="9"/>
+					<font fontName="Monospaced" size="7"/>
 				</textElement>
-				<text><![CDATA[Fecha Limite de Emision]]></text>
+				<text><![CDATA[Fecha Limite de Emision:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1" y="28" width="89" height="12" uuid="c1a601b0-bf4f-4f46-a4aa-a3a37c719c5e"/>
+				<reportElement x="1" y="21" width="89" height="10" uuid="c1a601b0-bf4f-4f46-a4aa-a3a37c719c5e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
 				<textElement>
-					<font fontName="Monospaced" size="9"/>
+					<font fontName="Monospaced" size="7"/>
 				</textElement>
 				<text><![CDATA[Rango Autorizado:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1" y="53" width="109" height="12" uuid="f8830005-bbec-4183-b041-feb64333305a"/>
+				<reportElement x="1" y="41" width="109" height="10" uuid="f8830005-bbec-4183-b041-feb64333305a">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
 				<textElement>
-					<font fontName="Monospaced" size="9"/>
+					<font fontName="Monospaced" size="7"/>
 				</textElement>
 				<text><![CDATA[Codigo C.A.I:]]></text>
 			</staticText>
 			<line>
-				<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToTallestObject" x="1" y="79" width="178" height="1" uuid="a28cc0bd-1968-4572-a2c2-bd864f1a52c3">
+				<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToTallestObject" x="1" y="62" width="178" height="1" uuid="a28cc0bd-1968-4572-a2c2-bd864f1a52c3">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
 				<graphicElement>
@@ -66,8 +72,8 @@ FROM datos_factura where codigo_rango= $P{cod_rango}]]>
 				</graphicElement>
 			</line>
 			<textField>
-				<reportElement x="1" y="66" width="178" height="12" uuid="d4d1a625-c351-4d3f-9085-5bf789796952">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<reportElement stretchType="RelativeToTallestObject" x="1" y="51" width="169" height="10" uuid="d4d1a625-c351-4d3f-9085-5bf789796952">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Monospaced" size="7"/>
@@ -75,20 +81,20 @@ FROM datos_factura where codigo_rango= $P{cod_rango}]]>
 				<textFieldExpression><![CDATA[$F{CAI}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="40" width="178" height="12" uuid="b40a283c-3176-4e80-99ef-6334b89d4e79">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<reportElement x="1" y="31" width="169" height="10" uuid="b40a283c-3176-4e80-99ef-6334b89d4e79">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Monospaced" size="8"/>
+					<font fontName="Monospaced" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{codigo_tipo_facturacion}+"-"+$F{factura_inicial}+" al "+$F{codigo_tipo_facturacion}+"-"+$F{factura_final}]]></textFieldExpression>
 			</textField>
 			<textField pattern="d/M/yy">
-				<reportElement x="1" y="14" width="69" height="12" uuid="bb8bb172-8083-4b62-b109-1c1167766460">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<reportElement x="1" y="11" width="69" height="10" uuid="bb8bb172-8083-4b62-b109-1c1167766460">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Monospaced" size="9"/>
+					<font fontName="Monospaced" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{fecha_limite_emision}]]></textFieldExpression>
 			</textField>
