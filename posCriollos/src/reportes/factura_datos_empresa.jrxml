@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
-<!-- 2016-03-17T23:09:39 -->
+<!-- 2016-03-17T23:20:56 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="datos_empresa" pageWidth="208" pageHeight="720" columnWidth="188" leftMargin="15" rightMargin="5" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="df013db5-f76e-44d3-b0df-bcbc46d93160">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
@@ -27,7 +27,7 @@ FROM datos_empresa]]>
 	<field name="direccion" class="java.lang.String"/>
 	<variable name="dato1" class="java.lang.String"/>
 	<title>
-		<band height="79" splitType="Stretch">
+		<band height="66" splitType="Stretch">
 			<textField>
 				<reportElement x="1" y="0" width="169" height="12" uuid="26025472-71fe-408c-bbe8-b106cd474dd4"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
@@ -54,14 +54,14 @@ FROM datos_empresa]]>
 				<textFieldExpression><![CDATA["R.N.T "+$F{rtn}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="46" width="169" height="10" uuid="732f1081-9c43-4770-a456-3ec4bf3a6fc4"/>
+				<reportElement x="1" y="44" width="169" height="10" uuid="732f1081-9c43-4770-a456-3ec4bf3a6fc4"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Monospaced" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Telefono "+$F{telefono}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="56" width="169" height="10" uuid="d531031f-4c83-46e5-9e83-780771b11649"/>
+				<reportElement x="1" y="52" width="169" height="10" uuid="d531031f-4c83-46e5-9e83-780771b11649"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Monospaced" size="7"/>
 				</textElement>
