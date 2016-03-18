@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
-<!-- 2016-03-16T21:53:01 -->
+<!-- 2016-03-18T00:01:55 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cierre_caja" pageWidth="216" pageHeight="720" columnWidth="190" leftMargin="16" rightMargin="10" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="df013db5-f76e-44d3-b0df-bcbc46d93160">
 	<property name="com.jaspersoft.studio.data.sql.tables" value="Y2xpbmljYS52X2NpZXJyZV9jYWphIEFTICw4Nyw2NyxiYWZiN2E1Yi1jZWEzLTRlNTMtOGJiOS1i&#xA;NzhiNzk3ODJlODI7"/>
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
@@ -180,7 +180,7 @@ WHERE
 					<rightPen lineWidth="0.2" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="9" isBold="false"/>
+					<font fontName="Monospaced" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{totalventa}]]></textFieldExpression>
 			</textField>
@@ -258,7 +258,7 @@ WHERE
 					<rightPen lineWidth="0.2" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="Monospaced" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{creditos}]]></textFieldExpression>
 			</textField>
@@ -290,7 +290,7 @@ WHERE
 					<rightPen lineWidth="0.2" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="Monospaced" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{tarjeta}]]></textFieldExpression>
 			</textField>
@@ -316,7 +316,7 @@ WHERE
 					<rightPen lineWidth="0.2" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="Monospaced" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{efectivo}]]></textFieldExpression>
 			</textField>
@@ -538,7 +538,7 @@ WHERE
 					<bottomPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
 					<rightPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
 				</box>
-				<textElement textAlignment="Center">
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Monospaced" size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Impuestos]]></text>
@@ -564,8 +564,8 @@ WHERE
 					<bottomPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
 					<rightPen lineWidth="0.2" lineStyle="Solid" lineColor="#666666"/>
 				</box>
-				<textElement textAlignment="Center">
-					<font fontName="SansSerif" size="10" isBold="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Ventas]]></text>
 			</staticText>
